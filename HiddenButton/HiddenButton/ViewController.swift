@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var buttonHndler: UIButton!
     
+    let systemSoundID: SystemSoundID = 1016
+
     let colors: [UIColor] = [.red, .blue, .cyan, .brown, .green, .yellow, .cyan, .brown, .green, .yellow]
     let gameController = GameController()
     
@@ -21,6 +24,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         buttonHndler.layer.cornerRadius = 55
+        buttonHndler.addAction(UIAction(handler: { _ in
+            self.view.backgroundColor = .yellow
+        }), for: .touchDown)
+        
+        buttonHndler.addAction(UIAction(handler: { _ in
+            self.view.backgroundColor = .systemPurple
+            AudioServicesPlaySystemSound(self.systemSoundID)
+        }), for: .touchUpInside)
+        
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {
