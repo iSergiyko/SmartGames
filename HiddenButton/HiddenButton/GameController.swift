@@ -31,7 +31,6 @@ class GameController {
             timeCounter = 0.0
             counterAction = 0
            
-            print("timer STARted")
 
             timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { _ in
                self.timeCounter += 0.01
