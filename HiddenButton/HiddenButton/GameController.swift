@@ -41,9 +41,6 @@ class GameController {
     }
     
     func processUserAction() -> Bool {
-        
-        
-        
         if counterAction < gameLevelUp.rawValue {
             counterAction += 1
             if counterAction == gameLevelUp.rawValue {
@@ -51,7 +48,6 @@ class GameController {
                 isStartGame = !isStartGame
                 return true
             }
-            
         }
         
         return false
