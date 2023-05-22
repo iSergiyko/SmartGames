@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FBF1AA02A1AD135001AB641 /* Start1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1A9F2A1AD135001AB641 /* Start1View.swift */; };
+		8FBF1AA42A1AE07B001AB641 /* Start2view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AA32A1AE07B001AB641 /* Start2view.swift */; };
 		8FD2009E2A0AF64E0089C1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */; };
 		8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */; };
-		8FD200A22A0AF64E0089C1F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD200A12A0AF64E0089C1F1 /* ViewController.swift */; };
+		8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */; };
 		8FD200A52A0AF64E0089C1F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD200A32A0AF64E0089C1F1 /* Main.storyboard */; };
 		8FD200A72A0AF6520089C1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD200A62A0AF6520089C1F1 /* Assets.xcassets */; };
 		8FD200AA2A0AF6520089C1F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD200A82A0AF6520089C1F1 /* LaunchScreen.storyboard */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FBF1A9F2A1AD135001AB641 /* Start1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start1View.swift; sourceTree = "<group>"; };
+		8FBF1AA32A1AE07B001AB641 /* Start2view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start2view.swift; sourceTree = "<group>"; };
 		8FD2009A2A0AF64E0089C1F1 /* HiddenButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8FD200A12A0AF64E0089C1F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenButtonViewController.swift; sourceTree = "<group>"; };
 		8FD200A42A0AF64E0089C1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FD200A62A0AF6520089C1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FD200A92A0AF6520089C1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FBF1A9E2A1AD085001AB641 /* StartGroup */ = {
+			isa = PBXGroup;
+			children = (
+				8FBF1A9F2A1AD135001AB641 /* Start1View.swift */,
+				8FBF1AA32A1AE07B001AB641 /* Start2view.swift */,
+			);
+			path = StartGroup;
+			sourceTree = "<group>";
+		};
 		8FD200912A0AF64E0089C1F1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +71,10 @@
 		8FD2009C2A0AF64E0089C1F1 /* HiddenButton */ = {
 			isa = PBXGroup;
 			children = (
+				8FBF1A9E2A1AD085001AB641 /* StartGroup */,
 				8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */,
 				8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */,
-				8FD200A12A0AF64E0089C1F1 /* ViewController.swift */,
+				8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */,
 				8FD200B12A0C495A0089C1F1 /* GameController.swift */,
 				8FD200A32A0AF64E0089C1F1 /* Main.storyboard */,
 				8FD200A62A0AF6520089C1F1 /* Assets.xcassets */,
@@ -141,10 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD200A22A0AF64E0089C1F1 /* ViewController.swift in Sources */,
+				8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */,
 				8FD200B22A0C495A0089C1F1 /* GameController.swift in Sources */,
+				8FBF1AA42A1AE07B001AB641 /* Start2view.swift in Sources */,
 				8FD2009E2A0AF64E0089C1F1 /* AppDelegate.swift in Sources */,
 				8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */,
+				8FBF1AA02A1AD135001AB641 /* Start1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

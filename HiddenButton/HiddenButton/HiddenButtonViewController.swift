@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class HiddenButtonViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var buttonHndler: UIButton!
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         buttonHndler.layer.cornerRadius = 55
         buttonHndler.addAction(UIAction(handler: { _ in
             self.view.backgroundColor = .yellow
@@ -32,7 +32,10 @@ class ViewController: UIViewController {
             self.view.backgroundColor = .systemPurple
             AudioServicesPlaySystemSound(self.systemSoundID)
         }), for: .touchUpInside)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {
@@ -43,9 +46,11 @@ class ViewController: UIViewController {
         self.gameController.startGame {
             let labelString = String(format: "%.2f", self.gameController.timeCounter)
             self.timerLabel.text = labelString
+            self.navigationController?.isNavigationBarHidden = true
         }
         
         if gameController.processUserAction() {
+            self.navigationController?.isNavigationBarHidden = false
             buttonHndler.setTitle("FINISH", for: .normal)
             buttonHndler.isUserInteractionEnabled = false
             let timerString = String(format: "%.2f", self.gameController.timeCounter)
