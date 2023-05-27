@@ -14,7 +14,7 @@ enum Levels : Int {
 }
 
 
-class GameController {
+class HBGameController {
     var timer = Timer()
     var timeCounter = 0.0
     var counterAction = 0

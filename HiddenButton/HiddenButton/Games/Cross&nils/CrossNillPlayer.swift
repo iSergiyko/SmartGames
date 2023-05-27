@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Player {
+struct CrossNillPlayer {
     var name: String
     var btnTags: [Int]
     var score: Int

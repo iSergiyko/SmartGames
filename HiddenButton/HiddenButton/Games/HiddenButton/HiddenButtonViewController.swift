@@ -16,7 +16,7 @@ class HiddenButtonViewController: UIViewController {
     let systemSoundID: SystemSoundID = 1016
 
     let colors: [UIColor] = [.red, .blue, .cyan, .brown, .green, .yellow, .cyan, .brown, .green, .yellow]
-    let gameController = GameController()
+    let gameController = HBGameController()
     
     
     

@@ -23,8 +23,8 @@ class CrossAndNillsViewController: UIViewController {
     
     var buttons: [UIButton] = []
     var isPlayerOneTurn: Bool = false
-    var player1: Player = Player(name: "Red", btnTags: [], score: 0)
-    var player2: Player = Player(name: "Blue", btnTags: [], score: 0)
+    var player1: CrossNillPlayer = CrossNillPlayer(name: "Red", btnTags: [], score: 0)
+    var player2: CrossNillPlayer = CrossNillPlayer(name: "Blue", btnTags: [], score: 0)
 
     
     override func viewDidLoad() {
