@@ -1,5 +1,5 @@
 //
-//  Start2view.swift
+//  GameSelectionViewController.swift
 //  HiddenButton
 //
 //  Created by Dmitry  Nidzelsky  on 22.05.2023.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class Start2View: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
   
     @IBOutlet weak var SelectGameLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
@@ -37,7 +37,7 @@ class Start2View: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         case 0:
             vcId = "HiddenButtonViewController"
         case 1:
-            print("To be implemented")
+            vcId = "CrossAndNillsViewController"
         case 2:
             print("To be implemented")
         default:
@@ -54,7 +54,7 @@ class Start2View: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
 }
 
-extension Start2View {
+extension GameSelectionViewController {
   
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -17,7 +17,7 @@ class Start1View: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Start2View")
             self.navigationController?.pushViewController(vc, animated: true)

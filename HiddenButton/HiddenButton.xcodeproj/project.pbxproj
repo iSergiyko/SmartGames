@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8FBF1AA02A1AD135001AB641 /* Start1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1A9F2A1AD135001AB641 /* Start1View.swift */; };
-		8FBF1AA42A1AE07B001AB641 /* Start2view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AA32A1AE07B001AB641 /* Start2view.swift */; };
+		8FBF1AA42A1AE07B001AB641 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AA32A1AE07B001AB641 /* GameSelectionViewController.swift */; };
+		8FBF1AAB2A224C3D001AB641 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AA92A224C3C001AB641 /* Player.swift */; };
+		8FBF1AAC2A224C3D001AB641 /* CrossAndNillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AAA2A224C3D001AB641 /* CrossAndNillsViewController.swift */; };
 		8FD2009E2A0AF64E0089C1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */; };
 		8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */; };
 		8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */; };
@@ -20,7 +22,9 @@
 
 /* Begin PBXFileReference section */
 		8FBF1A9F2A1AD135001AB641 /* Start1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start1View.swift; sourceTree = "<group>"; };
-		8FBF1AA32A1AE07B001AB641 /* Start2view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start2view.swift; sourceTree = "<group>"; };
+		8FBF1AA32A1AE07B001AB641 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
+		8FBF1AA92A224C3C001AB641 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8FBF1AAA2A224C3D001AB641 /* CrossAndNillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossAndNillsViewController.swift; sourceTree = "<group>"; };
 		8FD2009A2A0AF64E0089C1F1 /* HiddenButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +51,36 @@
 			isa = PBXGroup;
 			children = (
 				8FBF1A9F2A1AD135001AB641 /* Start1View.swift */,
-				8FBF1AA32A1AE07B001AB641 /* Start2view.swift */,
+				8FBF1AA32A1AE07B001AB641 /* GameSelectionViewController.swift */,
 			);
 			path = StartGroup;
+			sourceTree = "<group>";
+		};
+		8FBF1AA62A224B78001AB641 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				8FBF1AA82A224BD9001AB641 /* Cross&nils */,
+				8FBF1AA72A224BAF001AB641 /* HiddenButton */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		8FBF1AA72A224BAF001AB641 /* HiddenButton */ = {
+			isa = PBXGroup;
+			children = (
+				8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */,
+				8FD200B12A0C495A0089C1F1 /* GameController.swift */,
+			);
+			path = HiddenButton;
+			sourceTree = "<group>";
+		};
+		8FBF1AA82A224BD9001AB641 /* Cross&nils */ = {
+			isa = PBXGroup;
+			children = (
+				8FBF1AA92A224C3C001AB641 /* Player.swift */,
+				8FBF1AAA2A224C3D001AB641 /* CrossAndNillsViewController.swift */,
+			);
+			path = "Cross&nils";
 			sourceTree = "<group>";
 		};
 		8FD200912A0AF64E0089C1F1 = {
@@ -71,11 +102,10 @@
 		8FD2009C2A0AF64E0089C1F1 /* HiddenButton */ = {
 			isa = PBXGroup;
 			children = (
+				8FBF1AA62A224B78001AB641 /* Games */,
 				8FBF1A9E2A1AD085001AB641 /* StartGroup */,
 				8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */,
 				8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */,
-				8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */,
-				8FD200B12A0C495A0089C1F1 /* GameController.swift */,
 				8FD200A32A0AF64E0089C1F1 /* Main.storyboard */,
 				8FD200A62A0AF6520089C1F1 /* Assets.xcassets */,
 				8FD200A82A0AF6520089C1F1 /* LaunchScreen.storyboard */,
@@ -157,9 +187,11 @@
 			files = (
 				8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */,
 				8FD200B22A0C495A0089C1F1 /* GameController.swift in Sources */,
-				8FBF1AA42A1AE07B001AB641 /* Start2view.swift in Sources */,
+				8FBF1AA42A1AE07B001AB641 /* GameSelectionViewController.swift in Sources */,
 				8FD2009E2A0AF64E0089C1F1 /* AppDelegate.swift in Sources */,
+				8FBF1AAB2A224C3D001AB641 /* Player.swift in Sources */,
 				8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */,
+				8FBF1AAC2A224C3D001AB641 /* CrossAndNillsViewController.swift in Sources */,
 				8FBF1AA02A1AD135001AB641 /* Start1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
