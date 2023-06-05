@@ -47,13 +47,11 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.set(names, forKey: "names")
         }
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "GameControllerViewController") as! GameControllerViewController
-        
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Start2View") as! GameSelectionViewController
         vc.player = player
         
-        print("show gameController with player:")
-        dump(player)
+        //print("show gameController with player:")
+        //dump(player)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -82,6 +80,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         txtField.text = name
+        self.navigationController?.isNavigationBarHidden = true
     }
     
 }

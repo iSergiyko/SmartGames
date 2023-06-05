@@ -14,12 +14,15 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var SelectGameLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
+    var player = Player()
+    
     let games = ["Hidden Button", "Cross&nill" , "Black and Red"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.picker.delegate = self
         self.picker.dataSource = self
+        self.picker.backgroundColor = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,8 +67,23 @@ extension GameSelectionViewController {
         return games.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return games[row]
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return games[row]
+//    }
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int,
+                    forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        let pickerItem = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: pickerView.frame.width, height: 100)))
+        pickerItem.text = games[row]
+        pickerItem.font = UIFont.systemFont(ofSize: 55.0)
+        pickerItem.textColor = .white
+        pickerItem.textAlignment = .center
+        
+        return pickerItem
     }
 
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 70.0
+    }
 }

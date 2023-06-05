@@ -19,7 +19,7 @@ class Start1View: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Start2View")
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.navigationController?.pushViewController(vc, animated: true)
          }
         
