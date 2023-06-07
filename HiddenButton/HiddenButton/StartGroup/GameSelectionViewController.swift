@@ -42,7 +42,7 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
         case 1:
             vcId = "CrossAndNillsViewController"
         case 2:
-            vcId = "LoginViewController"
+            vcId = "GameControllerViewController"
         default:
             print("Error")
         }

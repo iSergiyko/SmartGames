@@ -46,6 +46,7 @@ class GameControllerViewController: UIViewController {
         correctLbl.text = "Choose your color"
         
         playBackGround()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func animateRB() {
