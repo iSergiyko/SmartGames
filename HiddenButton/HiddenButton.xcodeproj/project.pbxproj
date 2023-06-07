@@ -70,6 +70,9 @@
 			children = (
 				8FBF1A9F2A1AD135001AB641 /* Start1View.swift */,
 				8FBF1AA32A1AE07B001AB641 /* GameSelectionViewController.swift */,
+				8FBF1AB62A2257A5001AB641 /* LoginViewController.swift */,
+				8FBF1AB92A2257A5001AB641 /* UserListViewController.swift */,
+				8FBF1AB72A2257A5001AB641 /* Cells */,
 			);
 			path = StartGroup;
 			sourceTree = "<group>";
@@ -134,9 +137,6 @@
 		8FBF1AB52A2257A5001AB641 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8FBF1AB72A2257A5001AB641 /* Cells */,
-				8FBF1AB62A2257A5001AB641 /* LoginViewController.swift */,
-				8FBF1AB92A2257A5001AB641 /* UserListViewController.swift */,
 				8FBF1ABA2A2257A5001AB641 /* GameControllerViewController.swift */,
 			);
 			path = viewControllers;
