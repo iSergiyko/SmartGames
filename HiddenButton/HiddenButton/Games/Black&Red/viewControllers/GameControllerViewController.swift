@@ -11,7 +11,7 @@ import AVFoundation
 class GameControllerViewController: UIViewController {
 
     var gameController = BRGameController()
-    var player = Player()
+    var player = Player.emptyPlayer()
     var audioPlayer: AVAudioPlayer?
     var backGRNDAudioPlayer: AVAudioPlayer?
     
@@ -32,7 +32,7 @@ class GameControllerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sound On/Off"
-        scoreLabel.text = player.name + " score: \(player.countVgadav)"
+        scoreLabel.text = player.name + " score: \(player.rnBScore.score)"
         let btn = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopBGround))
         navigationItem.rightBarButtonItem = btn
         
@@ -75,7 +75,7 @@ class GameControllerViewController: UIViewController {
         
         correctLbl.text = isCorrect ? "Correct" : "Wrong"
         correctLbl.textColor = isCorrect ? .green : .red
-        scoreLabel.text = player.name + " score: \(player.countVgadav)"
+        scoreLabel.text = player.name + " score: \(player.rnBScore.countVgadav)"
         
         self.view.isUserInteractionEnabled = false
     }

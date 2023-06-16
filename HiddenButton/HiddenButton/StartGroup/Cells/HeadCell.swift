@@ -1,17 +1,15 @@
 //
-//  UserTableViewCell.swift
-//  textField
+//  HeadCell.swift
+//  test1
 //
-//  Created by Dmitry  Nidzelsky  on 05.05.2023.
+//  Created by Dmitry  Nidzelsky  on 06.06.2023.
 //
 
 import UIKit
 
-class UserTableViewCell: UITableViewCell {
+class HeadCell: BaseTableViewCell {
 
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var correctAttLbl: UILabel!
-    @IBOutlet weak var totalAttLbl: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +21,12 @@ class UserTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func expandBtnHndlr(_ sender: UIButton) {
+        parentVC?.updateCell(tag: tag)
+    }
+    
+    
+    
 
 }

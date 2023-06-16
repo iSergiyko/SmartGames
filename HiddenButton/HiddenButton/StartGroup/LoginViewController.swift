@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtField: UITextField!
     
     var name = ""
-    var player = Player()
+    var player = Player.emptyPlayer()
     
     
     @IBAction func startButtonHandler(_ sender: Any) {
@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         
         player.name = name
         
-        if var names: [String] = UserDefaults.standard.object(forKey: "names") as? [String] {
+        if let names: [String] = UserDefaults.standard.object(forKey: "names") as? [String] {
             var isName = false
             for userName in names{
                 let values = userName.split(separator: " ")
@@ -36,22 +36,18 @@ class LoginViewController: UIViewController {
             }
             
             if !isName {
-                name = name + " 0" + " 0"
-                names.append(name as String)
-                UserDefaults.standard.set(names, forKey: "names")
-                print(names)
+                let player = Player.emptyPlayer()
+                player.name = name
+                player.savePlayer()
             }
         } else {
-            name = name + " 0" + " 0"
-            let names: [String] = [name as String]
-            UserDefaults.standard.set(names, forKey: "names")
+            let player = Player.emptyPlayer()
+            player.name = name
+            player.savePlayer()
         }
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "Start2View") as! GameSelectionViewController
         vc.player = player
-        
-        //print("show gameController with player:")
-        //dump(player)
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

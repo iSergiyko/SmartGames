@@ -11,39 +11,53 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var usertableList: UITableView!
     var players = [Player]()
     
+    var isExpanded: [Bool] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         if let names = UserDefaults.standard.object(forKey: "names") as? [String] {
-            
+            dump(names)
             for name in names {
                 let values = name.split(separator: " ")
                 
-                if values.count == 3 {
+                
+                // TODO: )))
+                if values.count == 4 {
                     let name = values[0]
-                    let correct = values[1]
-                    let total = values[2]
-                    let player = Player()
-                    player.name = String(name)
-                    player.countVgadav = Int(correct) ?? 0
-                    player.score = Int(total) ?? 0
+//                    let correct = values[1]
+//                    let total = values[2]
                     
+                    
+                    let player = Player.emptyPlayer()
+                    player.retrivePlayer(playerName: String(name))
                     players.append(player)
+                    
                 }
             }
+            
+            isExpanded = Array(repeating: false, count: players.count)
         }
         
         usertableList.delegate = self
         usertableList.dataSource = self
         self.title = "Figters"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+
+    func updateCell(tag: Int) {
+        
+        isExpanded[tag] = !isExpanded[tag]
+        
+        let indexPath = IndexPath(row: tag, section: 0)
+        usertableList.reloadRows(at: [indexPath], with: .fade)
+    }
+    
 }
-
-
-
-
-
 
 
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -62,15 +76,32 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell else { return UITableViewCell() }
         
+        var cellID = ""
         
-        let player = players[indexPath.row]
-        cell.nameLbl.text = player.name
-        cell.correctAttLbl.text = "\(player.countVgadav)"
-        cell.totalAttLbl.text = "\(player.score)"
+        if isExpanded[indexPath.row] == true {
+            cellID = "ExpandedCell"
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ExpandedCell {
+                cell.parentVC = self
+                cell.tag = indexPath.row
+                let player = players[indexPath.row]
+                cell.nameLabel.text = player.name
+                return cell
+            }
+        } else {
+            cellID = "HeadCell"
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? HeadCell {
+                cell.parentVC = self
+                cell.tag = indexPath.row
+                let player = players[indexPath.row]
+                cell.nameLabel.text = player.name
+                return cell
+            }
+        }
         
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -111,7 +142,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
         
         var userNames = [String]()
         for player in players {
-            userNames.append(player.name + " \(player.countVgadav)" + " \(player.score)")
+            userNames.append(player.name + " \(player.rnBScore.countVgadav)" + " \(player.rnBScore.score)")
         }
         
         UserDefaults.standard.set(userNames, forKey: "names")

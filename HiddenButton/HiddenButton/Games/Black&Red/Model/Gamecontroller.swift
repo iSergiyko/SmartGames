@@ -7,7 +7,13 @@
 
 import Foundation
 import CoreVideo
+import CoreText
 
+enum Games: String {
+    case Cross
+    case HiddenButton
+    case BlackAndRed
+}
 
 enum RedBlack: Int {
     case Red = 1
@@ -45,14 +51,14 @@ class BRGameController {
         if playerHod == currentCorrect {
             gameMessge = "correct"
             print(gameMessge!)
-            player?.countVgadav += 1
+            player?.rnBScore.countVgadav += 1
             isCorrect = true
         } else {
             gameMessge = "wrong"
             print(gameMessge!)
         }
         
-        player?.score += 1
+        player?.rnBScore.score += 1
        
         // show countdown 10...0
         gameCounter -= 1
@@ -73,29 +79,7 @@ class BRGameController {
     
     func savePlayerData() {
         guard let player = player else { return }
-        
-        if var names: [String] = UserDefaults.standard.object(forKey: "names") as? [String] {
-            for i in 0..<names.count {
-                
-                var userName = names[i]
-                
-                let values = userName.split(separator: " ")
-                
-                if values.count == 3 {
-                    // name
-                    if values[0] == player.name {
-                        // change values of userName
-                        userName = "\(player.name) \(player.countVgadav) \(player.score)"
-                        names[i] = userName
-                        UserDefaults.standard.set(names, forKey: "names")
-                        
-                        print("Saving users")
-                        dump(names)
-                    }
-                }
-               
-            }
-        }
+        player.savePlayer()
     }
     
 }

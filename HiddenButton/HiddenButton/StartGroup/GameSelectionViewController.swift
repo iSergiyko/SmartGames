@@ -14,7 +14,7 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var SelectGameLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
-    var player = Player()
+    var player = Player.emptyPlayer()
     
     let games = ["Hidden Button", "Cross&nill" , "Black and Red"]
     
@@ -43,6 +43,11 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
             vcId = "CrossAndNillsViewController"
         case 2:
             vcId = "GameControllerViewController"
+            
+            let vc = storyboard.instantiateViewController(withIdentifier: vcId) as? GameControllerViewController
+            vc?.player = player
+            vcId = ""
+            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
         default:
             print("Error")
         }
