@@ -8,10 +8,9 @@
 import UIKit
 import AVFoundation
 
-class GameControllerViewController: UIViewController {
+class GameControllerViewController: BasicViewController {
 
     var gameController = BRGameController()
-    var player = Player.emptyPlayer()
     var audioPlayer: AVAudioPlayer?
     var backGRNDAudioPlayer: AVAudioPlayer?
     

@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class HiddenButtonViewController: UIViewController {
+class HiddenButtonViewController: BasicViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var buttonHndler: UIButton!
@@ -69,13 +69,22 @@ class HiddenButtonViewController: UIViewController {
             self.buttonHndler.setTitle("START", for: .normal)
             self.buttonHndler.frame.origin = CGPoint(x: 122, y: 688)
             self.buttonHndler.isUserInteractionEnabled = true
+            
+            self.savePlayerResult()
         }
         allert.addAction(action)
         present(allert, animated: true, completion: nil)
        
     }
     
-    
+    func savePlayerResult() {
+       
+        if player.hiddenScore.score == 0 || player.hiddenScore.score > self.gameController.timeCounter {
+            player.hiddenScore.score = self.gameController.timeCounter
+                
+            self.player.savePlayer()
+        }
+    }
     
 }
 

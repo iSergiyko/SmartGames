@@ -22,6 +22,7 @@
 		8FBF1AC02A2257A5001AB641 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AB62A2257A5001AB641 /* LoginViewController.swift */; };
 		8FBF1AC22A2257A5001AB641 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1AB92A2257A5001AB641 /* UserListViewController.swift */; };
 		8FBF1AC32A2257A5001AB641 /* GameControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF1ABA2A2257A5001AB641 /* GameControllerViewController.swift */; };
+		8FC439A52A3FB3F1007D7529 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC439A42A3FB3F1007D7529 /* BasicViewController.swift */; };
 		8FD2009E2A0AF64E0089C1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */; };
 		8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */; };
 		8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD200A12A0AF64E0089C1F1 /* HiddenButtonViewController.swift */; };
@@ -47,6 +48,7 @@
 		8FBF1AB62A2257A5001AB641 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8FBF1AB92A2257A5001AB641 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		8FBF1ABA2A2257A5001AB641 /* GameControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControllerViewController.swift; sourceTree = "<group>"; };
+		8FC439A42A3FB3F1007D7529 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		8FD2009A2A0AF64E0089C1F1 /* HiddenButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		8FBF1AA62A224B78001AB641 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				8FC439A32A3FB2E0007D7529 /* Common */,
 				8FBF1AAD2A2255FE001AB641 /* Black&Red */,
 				8FBF1AA82A224BD9001AB641 /* Cross&nils */,
 				8FBF1AA72A224BAF001AB641 /* HiddenButton */,
@@ -154,6 +157,14 @@
 				8F33A3772A3B87E200BD84AC /* HeadCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8FC439A32A3FB2E0007D7529 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8FC439A42A3FB3F1007D7529 /* BasicViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8FD200912A0AF64E0089C1F1 = {
@@ -261,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC439A52A3FB3F1007D7529 /* BasicViewController.swift in Sources */,
 				8FD200A22A0AF64E0089C1F1 /* HiddenButtonViewController.swift in Sources */,
 				8FD200B22A0C495A0089C1F1 /* HBGameController.swift in Sources */,
 				8FBF1AA42A1AE07B001AB641 /* GameSelectionViewController.swift in Sources */,

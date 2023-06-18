@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CrossAndNillsViewController: UIViewController {
+class CrossAndNillsViewController: BasicViewController {
     
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!

@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func startButtonHandler(_ sender: Any) {
       
-        guard var name = txtField.text else { return }
+        guard let name = txtField.text else { return }
         if name.isEmpty {
             return
         }
@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
         }
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "Start2View") as! GameSelectionViewController
+        player.retrivePlayer(playerName: player.name)
         vc.player = player
         
         self.navigationController?.pushViewController(vc, animated: true)

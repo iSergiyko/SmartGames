@@ -54,7 +54,7 @@ class UserListViewController: UIViewController {
         isExpanded[tag] = !isExpanded[tag]
         
         let indexPath = IndexPath(row: tag, section: 0)
-        usertableList.reloadRows(at: [indexPath], with: .fade)
+        usertableList.reloadRows(at: [indexPath], with: .automatic)
     }
     
 }
@@ -86,7 +86,17 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.parentVC = self
                 cell.tag = indexPath.row
                 let player = players[indexPath.row]
+               
                 cell.nameLabel.text = player.name
+                
+                cell.rnbGameNameLabel.text = Games.BlackAndRed.rawValue
+                cell.crossAndNillGameNameLabel.text = Games.Cross.rawValue
+                cell.hiddenButtonGameNameLabel.text = Games.HiddenButton.rawValue
+                
+                cell.rnbScoreLabel.text = String(player.rnBScore.countVgadav)
+                cell.crossAndNillScoreLabel.text = String(player.crossScore.score)
+                cell.hiddenButtonScoreLabel.text = String(format: "%.2f", player.hiddenScore.score)
+       
                 return cell
             }
         } else {

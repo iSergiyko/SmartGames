@@ -43,20 +43,13 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
             vcId = "CrossAndNillsViewController"
         case 2:
             vcId = "GameControllerViewController"
-            
-            let vc = storyboard.instantiateViewController(withIdentifier: vcId) as? GameControllerViewController
-            vc?.player = player
-            vcId = ""
-            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
         default:
             print("Error")
         }
         
-        if !vcId.isEmpty {
-            let vc = storyboard.instantiateViewController(withIdentifier: vcId)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
+        let vc = storyboard.instantiateViewController(withIdentifier: vcId) as? BasicViewController
+        vc?.player = player
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     

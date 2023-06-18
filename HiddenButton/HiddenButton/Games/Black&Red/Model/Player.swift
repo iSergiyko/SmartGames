@@ -29,17 +29,17 @@ class RnBScore: NSObject, NSCoding  {
 }
 
 class HiddenScore: NSObject, NSCoding  {
-    var score: Int = 0
+    var score: Double = 0.00
     
     func encode(with coder: NSCoder) {
         coder.encode(score, forKey: "score")
     }
     
     required init?(coder: NSCoder) {
-        score = coder.decodeObject(forKey: "score") as? Int ?? 0
+        score = coder.decodeObject(forKey: "score") as? Double ?? 0
     }
     
-    init(score: Int) {
+    init(score: Double) {
         self.score = score
     }
 }
@@ -175,13 +175,13 @@ class Player: NSObject, NSCoding {
                             
                             switch gameName {
                             case Games.BlackAndRed.rawValue:
-                                self.rnBScore.score = Int(score) ?? 0
+                                self.rnBScore.countVgadav = Int(score) ?? 0
                                 
                             case Games.Cross.rawValue:
                                 self.crossScore.score = Int(score) ?? 0
                                 
                             case Games.HiddenButton.rawValue:
-                                self.hiddenScore.score = Int(score) ?? 0
+                                self.hiddenScore.score = Double(score) ?? 0
                                 
                             default:
                                 break
