@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F2527992A462DF50098663B /* SliderMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2527982A462DF50098663B /* SliderMatchViewController.swift */; };
+		8F25279C2A4630FD0098663B /* SLiderStoRyBoarD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F25279B2A4630FD0098663B /* SLiderStoRyBoarD.storyboard */; };
 		8F33A3792A3B87E200BD84AC /* ExpandedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33A3762A3B87E200BD84AC /* ExpandedCell.swift */; };
 		8F33A37A2A3B87E200BD84AC /* HeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33A3772A3B87E200BD84AC /* HeadCell.swift */; };
 		8F33A37B2A3B87E200BD84AC /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33A3782A3B87E200BD84AC /* BaseTableViewCell.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F2527982A462DF50098663B /* SliderMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMatchViewController.swift; sourceTree = "<group>"; };
+		8F25279B2A4630FD0098663B /* SLiderStoRyBoarD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SLiderStoRyBoarD.storyboard; sourceTree = "<group>"; };
 		8F33A3762A3B87E200BD84AC /* ExpandedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedCell.swift; sourceTree = "<group>"; };
 		8F33A3772A3B87E200BD84AC /* HeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadCell.swift; sourceTree = "<group>"; };
 		8F33A3782A3B87E200BD84AC /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F25279A2A462EA10098663B /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				8F2527982A462DF50098663B /* SliderMatchViewController.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 		8FBF1A9E2A1AD085001AB641 /* StartGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		8FBF1AA62A224B78001AB641 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				8F25279A2A462EA10098663B /* Slider */,
 				8FC439A32A3FB2E0007D7529 /* Common */,
 				8FBF1AAD2A2255FE001AB641 /* Black&Red */,
 				8FBF1AA82A224BD9001AB641 /* Cross&nils */,
@@ -191,6 +204,7 @@
 				8FD2009D2A0AF64E0089C1F1 /* AppDelegate.swift */,
 				8FD2009F2A0AF64E0089C1F1 /* SceneDelegate.swift */,
 				8FD200A32A0AF64E0089C1F1 /* Main.storyboard */,
+				8F25279B2A4630FD0098663B /* SLiderStoRyBoarD.storyboard */,
 				8FD200A62A0AF6520089C1F1 /* Assets.xcassets */,
 				8FD200A82A0AF6520089C1F1 /* LaunchScreen.storyboard */,
 				8FD200AB2A0AF6520089C1F1 /* Info.plist */,
@@ -261,6 +275,7 @@
 				8FD200A72A0AF6520089C1F1 /* Assets.xcassets in Resources */,
 				8FBF1ABE2A2257A5001AB641 /* backGraund.mp3 in Resources */,
 				8FD200A52A0AF64E0089C1F1 /* Main.storyboard in Resources */,
+				8F25279C2A4630FD0098663B /* SLiderStoRyBoarD.storyboard in Resources */,
 				8FBF1ABF2A2257A5001AB641 /* correct.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +298,7 @@
 				8FBF1ABB2A2257A5001AB641 /* Gamecontroller.swift in Sources */,
 				8FBF1AAB2A224C3D001AB641 /* CrossNillPlayer.swift in Sources */,
 				8FBF1AC22A2257A5001AB641 /* UserListViewController.swift in Sources */,
+				8F2527992A462DF50098663B /* SliderMatchViewController.swift in Sources */,
 				8F33A37A2A3B87E200BD84AC /* HeadCell.swift in Sources */,
 				8F33A37B2A3B87E200BD84AC /* BaseTableViewCell.swift in Sources */,
 				8FD200A02A0AF64E0089C1F1 /* SceneDelegate.swift in Sources */,

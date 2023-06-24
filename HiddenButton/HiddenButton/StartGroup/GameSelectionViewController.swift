@@ -16,7 +16,7 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     var player = Player.emptyPlayer()
     
-    let games = ["Hidden Button", "Cross&nill" , "Black and Red"]
+    let games = ["Hidden Button", "Cross&nill" , "Black and Red", "Slider"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBAction func goButtonHndler(_ sender: UIButton) {
         let selectedRow = picker.selectedRow(inComponent: 0)
        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vcId: String = ""
         
         
@@ -43,6 +43,9 @@ class GameSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
             vcId = "CrossAndNillsViewController"
         case 2:
             vcId = "GameControllerViewController"
+        case 3:
+            vcId = "SliderMatchViewController"
+            storyboard = UIStoryboard(name: "SLiderStoRyBoarD", bundle: nil)
         default:
             print("Error")
         }
