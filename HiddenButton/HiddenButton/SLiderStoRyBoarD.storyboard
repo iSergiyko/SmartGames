@@ -44,39 +44,42 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-dm-QWq">
-                                <rect key="frame" x="64" y="348" width="719" height="31"/>
+                                <rect key="frame" x="64" y="348" width="651" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOf-js-hv1">
-                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="New Game" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="plain" title="Restart" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" red="0.22156290870000001" green="0.69289081350000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="strokeColor" systemColor="systemTealColor"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="restart" destination="Y6W-OH-hqX" eventType="touchUpInside" id="blg-Gf-RB1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-gL-8FM">
-                                        <rect key="frame" x="211.5" y="0.0" width="44.5" height="31"/>
+                                        <rect key="frame" x="188" y="0.0" width="44.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95K-ZM-6HF">
-                                        <rect key="frame" x="373" y="0.0" width="41.5" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95K-ZM-6HF">
+                                        <rect key="frame" x="349.5" y="0.0" width="10.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-lu-RBg">
-                                        <rect key="frame" x="531.5" y="0.0" width="49.5" height="31"/>
+                                        <rect key="frame" x="477" y="0.0" width="49.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujK-Wv-sIz">
-                                        <rect key="frame" x="698" y="0.0" width="21" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujK-Wv-sIz">
+                                        <rect key="frame" x="643.5" y="0.0" width="7.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -113,7 +116,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="roundLabel" destination="ujK-Wv-sIz" id="7Wu-eA-Dd1"/>
+                        <outlet property="scoreLabel" destination="95K-ZM-6HF" id="fE6-9m-CRV"/>
                         <outlet property="slider" destination="hzx-Zo-Mfz" id="lYd-Sz-uKs"/>
+                        <outlet property="targetLabel" destination="0xh-Hi-gtW" id="6vY-IL-Cbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
