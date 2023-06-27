@@ -45,7 +45,6 @@ class SliderMatchViewController: BasicViewController {
     @IBAction func showAlert(_ sender: UIButton) {
         
         var difference: Int
-        var score = 0
         
         let currentValue = lroundf(slider.value)
         
@@ -62,7 +61,9 @@ class SliderMatchViewController: BasicViewController {
         let message = "Sliders value: \(currentValue) \nDifference: \(difference)\nPOINTS: \(currentScore)"
         
         let alertWindow = UIAlertController(title: "TARGET: \(targetValue)", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Close", style: .default)
+        let action = UIAlertAction(title: "Close", style: .default) {_ in 
+            self.newRound()
+        }
     
         alertWindow.addAction(action)
         present(alertWindow, animated: true, completion: nil)
@@ -72,6 +73,20 @@ class SliderMatchViewController: BasicViewController {
         round += 1
         newRound()
         
+    }
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func restartButtonHandler(_ sender: UIButton) {
+        targetValue = 0
+        score = 0
+        round = 1
+        newRound()
+        scoreLabel.text = "\(score)"
     }
     
 }

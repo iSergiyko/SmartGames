@@ -57,7 +57,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="restart" destination="Y6W-OH-hqX" eventType="touchUpInside" id="blg-Gf-RB1"/>
+                                            <action selector="restartButtonHandler:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8OK-yS-WJA"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-gL-8FM">
